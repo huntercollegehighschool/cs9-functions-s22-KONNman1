@@ -11,12 +11,13 @@ You are expected to call the defined factorial function inside the combination d
 The combination formula: n! / (r! * (n-r)!)  (! is factorial)
 """
 
-# do not change the factorial function
+
 def factorial(number):
   product = 1
   for i in range(1, number + 1):
     product *= i
   return product
 
-def combination(n, r):  # do not change this line
-  pass  # delete the word pass when you start writing your code
+def combination(n, r):
+  combination = factorial(n) // (factorial(r) * factorial(n-r))
+  return combination
